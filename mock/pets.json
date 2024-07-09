@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Biscoito",
+    "image": "/images/Biscoito.jpg",
+    "link": "https://www.amigonaosecompra.com.br/pets/biscoito-rio-de-janeiro-rio-de-janeiro-macho-b58cdfc2-22fe-4085-a648-beb624d0b095",
+    "available": true,
+    "description": "Biscoito é muito divertido! Adora bolinhas e receber carinho! Um gatinho muito especial!",
+    "location": "Rio de Janeiro - Rio de janeiro"
+  },
+  {
+    "id": 2,
+    "name": "BomBom",
+    "image": "/images/BomBom.jpg",
+    "link": "https://www.amigonaosecompra.com.br/pets/bombom-sao-paulo-sao-paulo-femea-46d35523-eb9f-4910-a131-b8d14ffe7792",
+    "available": true,
+    "description": "BOMBOM é outro doce de gatinha. Ama um colinho é ronronenta e muito carinhosa. Também é brincalhona e cheia de charme.",
+    "location": "São Paulo - São Paulo"
+  },
+  {
+    "id": 3,
+    "name": "Eliana",
+    "image": "/images/Eliana.jpg",
+    "link": "https://www.amigonaosecompra.com.br/pets/filhotes-eliana-sao-paulo-sao-paulo-femea-3c2dbd0c-bcc4-4a77-a63b-bde1bca081e9",
+    "available": true,
+    "description": "Eliana é uma gatinha doce, adora brincar e ficar de grude.",
+    "location": "São Paulo - São Paulo"
+  },
+  {
+    "id": 4,
+    "name": "Laila",
+    "image": "/images/Laila.jpg",
+    "link": "https://www.amigonaosecompra.com.br/pets/laila-sao-paulo-cotia-femea-76d68a50-e34b-4b5a-8ade-2723fda29cc5",
+    "available": true,
+    "description": "Fêmea com 1 ano e meio, porte pequeno, pesa 6 klilos,dócil, será castrada.",
+    "location": "Cotia - São Paulo"
+  },
+  {
+    "id": 5,
+    "name": "Luigi",
+    "image": "/images/Luigi.jpeg",
+    "link": "https://www.amigonaosecompra.com.br/pets/luigi-sao-paulo-sao-paulo-macho-a2e42cf7-3a0a-4cbe-acd4-0c0f2a3054c3",
+    "available": true,
+    "description": "Luigi, carinhoso, brincalhão, super ativo! mestiços de pit.",
+    "location": "São Paulo - São Paulo"
+  },
+  {
+    "id": 6,
+    "name": "Mel",
+    "image": "/images/Mel.jpg",
+    "link": "https://www.amigonaosecompra.com.br/pets/mel-sao-paulo-sao-paulo-femea-709f8d93-5fae-44ee-b137-63075b44c004",
+    "available": true,
+    "description": "MEL é um doce de gatinha. Já dá para perceber isso por esse olharzinho, né. Ela é a mais comilona. Super curiosa e brincalhona, assim como os irmãozinhos.",
+    "location": "São Paulo - São Paulo"
+  },
+  {
+    "id": 7,
+    "name": "Tufinho",
+    "image": "/images/Tufinho.jpeg",
+    "link": "https://www.amigonaosecompra.com.br/pets/tufinho-rio-de-janeiro-rio-de-janeiro-macho-52bce030-0f7a-4ed8-a319-c06fadf0c0bb",
+    "available": true,
+    "description": "Pense num cãozinho que nunca teve uma família ou um lar! Vivia acorrentado num quintal de uma acumuladora, exposto ao tempo! Tem apenas 3 aninhos mas já conheceu os horrores dos maus tratos!",
+    "location": "Rio de janeiro - Rio de janeiro"
+  },
+  {
+    "id": 8,
+    "name": "Vitoria",
+    "image": "/images/Vitoria.jpeg",
+    "link": "https://www.amigonaosecompra.com.br/pets/vitoria-sao-paulo-sao-paulo-femea-4fa6b388-6319-4c86-aadb-38d5a5648d10",
+    "available": true,
+    "description": "3 meses de muita fofura, pesando 2,5kg, vai ficar porte pequeno pra médio, vermifugado, para lares 100% seguros.",
+    "location": "São Paulo - São Paulo"
+  }
+]

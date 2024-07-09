@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Pet {
+  id          Int      @id @default(autoincrement()) @db.UnsignedInt
+  name        String   @db.VarChar(60)
+  image       String   @db.VarChar(255)
+  link        String   @db.VarChar(255)
+  available   Int      @db.TinyInt
+  description String   @db.VarChar(255)
+  location    String   @db.VarChar(100)
+  createdAt   DateTime @default(now()) @db.Timestamp(0)
+  updatedAt   DateTime @default(now()) @db.Timestamp(0)
+
+  @@map("pets")
+}
