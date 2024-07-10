@@ -16,6 +16,8 @@ import { CreatePetsDTO } from './dto/create-pets-dto';
 import { UpdatePutPetsDTO } from './dto/update-put-pets-dto';
 import { UpdatePatchPetsDTO } from './dto/update-patch-pets-dto';
 
+//Interceptors - Executar antes de qualquer execução do controller
+//@UseInterceptors(LogInterceptor)
 @Controller('pets')
 export class PetsController {
   constructor(private readonly petsService: PetsService) {}
