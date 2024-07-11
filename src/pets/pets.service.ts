@@ -12,8 +12,9 @@ export class PetsService {
     return this.prisma.pet.findMany();
   }
 
-  findOne(id: number) {
+  async findOne(id: number) {
     //Usei findUnique pois nela só tem o id para passar, o findFirst pode ser várias chaves que poderia pesar
+    await this.exists(id);
     return this.prisma.pet.findUnique({
       where: {
         id,
@@ -57,7 +58,15 @@ export class PetsService {
   }
 
   async exists(id: number) {
-    if (!(await this.findOne(id))) {
+    //Fiz um count para usar a memoria do prisma que já sabe quantos id ele tem
+    //Dessa forma é mais rápido ele procurar
+    if (
+      !(await this.prisma.pet.count({
+        where: {
+          id,
+        },
+      }))
+    ) {
       throw new NotFoundException(`Pet ${id} não encontrado`);
     }
   }
