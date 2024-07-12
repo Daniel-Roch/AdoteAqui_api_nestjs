@@ -6,7 +6,6 @@ import {
   HttpCode,
   HttpStatus,
   Param,
-  ParseIntPipe,
   Patch,
   Post,
   Put,
@@ -15,6 +14,7 @@ import { PetsService } from './pets.service';
 import { CreatePetsDTO } from './dto/create-pets-dto';
 import { UpdatePutPetsDTO } from './dto/update-put-pets-dto';
 import { UpdatePatchPetsDTO } from './dto/update-patch-pets-dto';
+import { ParamId } from 'src/decorators/param-id-decorator';
 
 //Interceptors - Executar antes de qualquer execução do controller
 //@UseInterceptors(LogInterceptor)
@@ -28,12 +28,12 @@ export class PetsController {
   }
 
   @Get(':id')
-  async getOne(@Param('id', ParseIntPipe) id: number) {
+  async getOne(@ParamId('id') id: number) {
     return this.petsService.findOne(id);
   }
 
   @Get(':id/:name')
-  async getTwo(@Param('id', ParseIntPipe) id, @Param('name') name) {
+  async getTwo(@ParamId('id') id: number, @Param('name') name: string) {
     return `Id é ${id} e o nome: ${name}`;
   }
 
@@ -44,25 +44,19 @@ export class PetsController {
   }
 
   @Patch(':id')
-  async update(
-    @Param('id', ParseIntPipe) id: number,
-    @Body() body: UpdatePatchPetsDTO,
-  ) {
+  async update(@ParamId('id') id: number, @Body() body: UpdatePatchPetsDTO) {
     return this.petsService.updateOne(id, body);
   }
 
   @Put(':id')
-  async updateAll(
-    @Param('id', ParseIntPipe) id: number,
-    @Body() body: UpdatePutPetsDTO,
-  ) {
+  async updateAll(@ParamId('id') id: number, @Body() body: UpdatePutPetsDTO) {
     return this.petsService.update(id, body);
   }
 
   //o HttpStatus.NO_CONTENT é apenas uma conveção onde em vez de colocar 204 ele vai colocar o 204 pra mim
   @HttpCode(HttpStatus.NO_CONTENT)
   @Delete(':id')
-  async remove(@Param('id', ParseIntPipe) id: number) {
+  async remove(@ParamId('id') id: number) {
     return this.petsService.remove(id);
   }
 }

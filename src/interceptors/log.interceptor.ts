@@ -2,6 +2,8 @@ import { CallHandler, ExecutionContext, NestInterceptor } from '@nestjs/common';
 import { Observable, tap } from 'rxjs';
 import { Colors } from 'colors_terminal';
 
+//Interceptor é executado depois da chamada
+//Neste, eu fiz para que me informe quanto tempo está durando a requisição
 export class LogInterceptor implements NestInterceptor {
   intercept(
     context: ExecutionContext,
