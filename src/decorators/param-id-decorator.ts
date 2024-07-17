@@ -1,6 +1,6 @@
 import { createParamDecorator, ExecutionContext } from '@nestjs/common';
 
-//Criação de decorators para criar facilidades na hora de passar.
+//Criação de decorators para criar facilidades na hora de seguir o fluxo.
 //O data não está vindo nenhuma data, então não preciso, coloco _
 //Eu sei que o params id vem como string, converti para number.
 //farei ParamId() id, assim é mais fácil do que o existente: @Param('id', ParseIntPipe)

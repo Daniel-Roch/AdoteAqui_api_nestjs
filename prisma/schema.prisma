@@ -20,3 +20,15 @@ model Pet {
 
   @@map("pets")
 }
+
+model User {
+  id          Int      @id @default(autoincrement()) @db.UnsignedInt
+  name        String   @db.VarChar(60)
+  email       String   @db.VarChar(255)
+  password    String   @db.VarChar(255)
+  birthAt     DateTime?@db.Date
+  createdAt   DateTime @default(now()) @db.Timestamp(0)
+  updatedAt   DateTime @default(now()) @db.Timestamp(0)
+
+  @@map("users")
+}

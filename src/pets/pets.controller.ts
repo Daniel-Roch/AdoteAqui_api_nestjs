@@ -9,15 +9,18 @@ import {
   Patch,
   Post,
   Put,
+  UseGuards,
 } from '@nestjs/common';
 import { PetsService } from './pets.service';
 import { CreatePetsDTO } from './dto/create-pets-dto';
 import { UpdatePutPetsDTO } from './dto/update-put-pets-dto';
 import { UpdatePatchPetsDTO } from './dto/update-patch-pets-dto';
 import { ParamId } from 'src/decorators/param-id-decorator';
+import { AuthGuard } from 'src/guards/auth.guard';
 
 //Interceptors - Executar antes de qualquer execução do controller
 //@UseInterceptors(LogInterceptor)
+@UseGuards(AuthGuard)
 @Controller('pets')
 export class PetsController {
   constructor(private readonly petsService: PetsService) {}
